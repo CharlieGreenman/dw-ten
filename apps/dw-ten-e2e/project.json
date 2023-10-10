@@ -1,0 +1,29 @@
+{
+  "name": "dw-ten-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/dw-ten-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/dw-ten-e2e/cypress.json",
+        "devServerTarget": "dw-ten:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "dw-ten:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dw-ten-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dw-ten"]
+}
