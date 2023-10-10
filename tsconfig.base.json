@@ -23,6 +23,9 @@
       ],
       "@dw-ten/common/ui": [
         "libs/common/ui/src/index.ts"
+      ],
+      "@dw-ten/home": [
+        "libs/home/src/index.ts"
       ]
     }
   },
