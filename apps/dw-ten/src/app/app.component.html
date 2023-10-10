@@ -1,5 +1,19 @@
-<dw-ten-global-header (sideNavToggle)="sideNavToggle()"></dw-ten-global-header>
+<dw-ten-global-header (sidenavtoggle)="sideNavToggle()"></dw-ten-global-header>
 <div class="wrapper">
-  <div class="container"></div>
+  <div class="container">
+    <dw-ten-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav="">
+        <a
+          mat-list-item=""
+          routerlinkactive="active-link"
+          routerlink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </dw-ten-global-sidenav>
+  </div>
 </div>
 <dw-ten-global-footer> </dw-ten-global-footer>
