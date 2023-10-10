@@ -20,6 +20,9 @@
     "paths": {
       "@dw-ten/common/styles": [
         "libs/common/styles/src/index.ts"
+      ],
+      "@dw-ten/common/ui": [
+        "libs/common/ui/src/index.ts"
       ]
     }
   },
